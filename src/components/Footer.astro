@@ -1,0 +1,15 @@
+---
+const currentYear = new Date().getFullYear();
+---
+<footer class="border-t border-gray-800 bg-[#0d1117] py-6 text-center text-sm text-gray-500 font-mono mt-auto relative z-10">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+    <p>&copy; {currentYear} Usuario. All systems operational.</p>
+    <div class="flex items-center space-x-2 mt-4 md:mt-0">
+      <span class="relative flex h-2 w-2">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+      </span>
+      <span class="text-green-500 text-xs">ONLINE</span>
+    </div>
+  </div>
+</footer>

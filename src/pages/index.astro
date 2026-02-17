@@ -1,0 +1,115 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import SystemMonitor from '../components/SystemMonitor.astro';
+import ContactTerminal from '../components/ContactTerminal.astro';
+---
+
+<Layout title="Usuario | Cloud & Dev Portfolio">
+	<section id="hero" class="min-h-[80vh] flex flex-col justify-center items-start">
+		<div class="space-y-4">
+            <p class="text-green-500 text-sm md:text-base animate-pulse">> init_sequence_start</p>
+			<h1 class="text-4xl md:text-6xl font-bold text-white tracking-tight">
+				Hola, soy <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">Usuario</span>
+			</h1>
+			<h2 class="text-xl md:text-2xl text-gray-400">
+				Infraestructura. Servidores. Desarrollo Web.
+			</h2>
+            <div class="p-4 border border-gray-700 bg-black/50 rounded-md mt-6 font-mono text-sm max-w-lg shadow-lg backdrop-blur-sm">
+                <p class="text-gray-400 border-b border-gray-700 pb-2 mb-2 flex justify-between">
+                    <span>user@portfolio:~</span>
+                    <span class="text-xs text-gray-600">bash</span>
+                </p>
+                <div class="font-mono space-y-2">
+                    <p class="text-green-400">$ cat profile.json</p>
+                    <div class="text-gray-300 pl-4">
+                        <span class="text-yellow-400">"role"</span>: "Desarrollador Full Stack",<br>
+                        <span class="text-yellow-400">"focus"</span>: ["Cloud Computing", "DevOps", "Astro"],<br>
+                        <span class="text-yellow-400">"status"</span>: <span class="text-green-400">"Ready to deploy"</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 flex gap-4">
+                <a href="#projects" class="px-6 py-3 bg-green-600/10 border border-green-500/50 text-green-400 hover:bg-green-600/20 hover:text-green-300 transition-all rounded text-sm font-semibold">
+                    [ VIEW_PROJECTS ]
+                </a>
+                <a href="#contact" class="px-6 py-3 bg-gray-800/50 border border-gray-700 text-gray-300 hover:bg-gray-800 hover:text-white transition-all rounded text-sm font-semibold">
+                    ./contact_me.sh
+                </a>
+            </div>
+		</div>
+	</section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 border-t border-gray-800/50">
+        <div class="mb-12">
+            <h2 class="text-2xl font-bold text-white flex items-center">
+                <span class="text-green-500 mr-2">$</span>
+                ls -la ./projects
+            </h2>
+            <p class="text-gray-500 text-sm mt-2 ml-6">// Showing list of deployed services</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <ProjectCard 
+                title="e-commerce-api"
+                description="RESTful API scalable construida para manejar alto tráfico. Incluye autenticación JWT y procesamiento de pagos."
+                status="online"
+                tech={['Node.js', 'Express', 'MongoDB', 'Docker']}
+                link="https://example.com"
+                repo="https://github.com"
+            />
+            <ProjectCard 
+                title="dashboard-analytics"
+                description="Panel de administración en tiempo real para visualizar métricas de sistema y logs de servidores."
+                status="maintenance"
+                tech={['React', 'D3.js', 'Firebase', 'Tailwind']}
+                link="https://example.com"
+                repo="https://github.com"
+            />
+             <ProjectCard 
+                title="portfolio-v1"
+                description="Sitio web personal anterior. Deprecado en favor de esta nueva versión basada en Astro."
+                status="offline"
+                tech={['HTML', 'SASS', 'Vanilla JS']}
+                repo="https://github.com"
+            />
+             <ProjectCard 
+                title="cloud-monitor-bot"
+                description="Bot de Discord para monitorear estado de servidores y notificar caídas en tiempo real."
+                status="deploying"
+                tech={['Python', 'Discord.py', 'AWS Lambda']}
+                link="https://example.com"
+            />
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="stack" class="py-20 border-t border-gray-800/50">
+        <div class="mb-12">
+            <h2 class="text-2xl font-bold text-white flex items-center">
+                <span class="text-green-500 mr-2">$</span>
+                 top
+            </h2>
+            <p class="text-gray-500 text-sm mt-2 ml-6">// Live system resources (Skills)</p>
+        </div>
+        
+        <SystemMonitor />
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 border-t border-gray-800/50 mb-20">
+        <div class="mb-12">
+            <h2 class="text-2xl font-bold text-white flex items-center">
+                <span class="text-green-500 mr-2">$</span>
+                 ssh user@contact
+            </h2>
+            <p class="text-gray-500 text-sm mt-2 ml-6">// Initialize communication protocol</p>
+        </div>
+
+        <div class="max-w-2xl mx-auto">
+            <ContactTerminal />
+        </div>
+    </section>
+</Layout>
