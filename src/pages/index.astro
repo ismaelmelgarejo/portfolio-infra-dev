@@ -23,27 +23,33 @@ import ContactTerminal from "../components/ContactTerminal.astro";
                 >
             </h1>
             <h2 class="text-xl md:text-2xl text-gray-400">
-                Infraestructura. Servidores. Desarrollo Web.
+                Desarrollo. Infraestructura. Servidores.
             </h2>
-            <div
-                class="p-4 border border-gray-700 bg-black/50 rounded-md mt-6 font-mono text-sm max-w-lg shadow-lg backdrop-blur-sm"
-            >
-                <p
-                    class="text-gray-400 border-b border-gray-700 pb-2 mb-2 flex justify-between"
-                >
-                    <span>user@portfolio:~</span>
-                    <span class="text-xs text-gray-600">bash</span>
-                </p>
+            <div class="border border-gray-800 bg-black p-6 rounded shadow-lg font-mono mt-6 max-w-lg text-sm">
+                <div class="flex justify-between items-center mb-4 border-b border-gray-800 pb-2">
+                    <div class="flex space-x-2">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                    <div class="text-gray-500 text-xs flex gap-2">
+                        <span>user@portfolio:~</span>
+                        <span class="text-gray-600">bash</span>
+                    </div>
+                </div>
                 <div class="font-mono space-y-2">
                     <p class="text-green-400">$ cat profile.json</p>
                     <div class="text-gray-300 pl-4">
-                        <span class="text-yellow-400">"role"</span>:
-                        "Desarrollador Full Stack",<br />
-                        <span class="text-yellow-400">"focus"</span>: ["Cloud
-                        Computing", "DevOps", "Astro"],<br />
-                        <span class="text-yellow-400">"status"</span>: <span
-                            class="text-green-400">"Ready to deploy"</span
-                        >
+                        &#123;<br />
+                        <span class="text-yellow-400">&nbsp;&nbsp;"role"</span>:
+                        "Desarrollador",<br />
+                        <span class="text-yellow-400">&nbsp;&nbsp;"focus"</span
+                        >: ["Development", "DevOps", "Servidores"],<br />
+                        <span class="text-yellow-400">&nbsp;&nbsp;"status"</span
+                        >: <span class="text-green-400"
+                            >"Ready to implement Friday"</span
+                        ><br />
+                        &#125;
                     </div>
                 </div>
             </div>
@@ -79,14 +85,13 @@ import ContactTerminal from "../components/ContactTerminal.astro";
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <ProjectCard
-                title="e-commerce-api"
-                description="RESTful API scalable construida para manejar alto tráfico. Incluye autenticación JWT y procesamiento de pagos."
-                status="online"
+                title="SOC-Bitacora"
+                description="RESTful API escalable construida para manejar alto tráfico. Incluye autenticación JWT y procesamiento de pagos."
+                status="maintenance"
                 tech={["Node.js", "Express", "MongoDB", "Docker"]}
-                link="https://example.com"
-                repo="https://github.com"
+                repo="https://github.com/ismaelmelgarejo/BE_Bitacora_SOC2.git"
             />
-            <ProjectCard
+            <!--<ProjectCard
                 title="dashboard-analytics"
                 description="Panel de administración en tiempo real para visualizar métricas de sistema y logs de servidores."
                 status="maintenance"
@@ -107,7 +112,7 @@ import ContactTerminal from "../components/ContactTerminal.astro";
                 status="deploying"
                 tech={["Python", "Discord.py", "AWS Lambda"]}
                 link="https://example.com"
-            />
+            /> -->
         </div>
     </section>
 
